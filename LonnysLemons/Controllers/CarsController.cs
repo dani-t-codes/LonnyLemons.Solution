@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Dealership.Models;
 using System.Collections.Generic;
+using Dealership.Models;
 
 namespace LonnysLemons.Controllers
 {
@@ -9,7 +9,7 @@ namespace LonnysLemons.Controllers
     [HttpGet("/cars")]
     public ActionResult Index()
     {
-      List<Cars> allCars = CarsController.GetAll();
+      List<Car> allCars = Car.GetAll();
       return View(allCars);
     }
 
@@ -22,7 +22,7 @@ namespace LonnysLemons.Controllers
     [HttpPost("/cars")]
     public ActionResult Create(string description)
     {
-      Cars myCars = new Cars(description);
+      Car myCars = new Car(description);
       return RedirectToAction("Index");
     }
 
