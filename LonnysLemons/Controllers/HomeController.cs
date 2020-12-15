@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using Dealership.Models;
 
-namespace LonnysLemons.Controllers
+namespace Dealership.Controllers
 {
   public class HomeController : Controller
   {
@@ -8,7 +9,9 @@ namespace LonnysLemons.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     {
-      return View();
+      Car starterCar = new Car("Add new car to inventory.");
+      return View(starterCar);
     }
+    
   }
 }
