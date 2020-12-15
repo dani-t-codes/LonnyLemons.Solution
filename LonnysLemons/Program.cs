@@ -39,12 +39,12 @@ namespace Dealership {//namespace groups interrelated and interdependent classes
         Console.WriteLine("$" + automobile.GetPrice());
       }
     }
-    static void Main()
-    {
-      Car yugo = new Car("1980 Yugo Koral", 700, 56000);
-      Console.WriteLine(yugo.MakeModel);
-      yugo.MakeModel = "Worst Car Ever";
-      Console.WriteLine(yugo.MakeModel);
-    }
+    // static void Main()
+    // {
+    //   Car yugo = new Car("1980 Yugo Koral", 700, 56000);
+    //   Console.WriteLine(yugo.MakeModel);
+    //   yugo.MakeModel = "Worst Car Ever";
+    //   Console.WriteLine(yugo.MakeModel);
+    // }
   }
 }
